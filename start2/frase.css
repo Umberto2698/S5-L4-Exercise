@@ -7,4 +7,53 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1.5rem;
+  font-family: "Bree Serif", serif;
+}
+
+main {
+  padding: 2rem;
+}
+
+#testoAlternato {
+  border: 2px solid gray;
+  color: #333333;
+  padding: 1rem;
+  font-size: 1.25rem;
+  line-height: normal;
+}
+
+p {
+  /* overflow: hidden; */
+}
+
+span {
+  position: relative;
+  color: #6a889c;
+}
+
+i:not(i:first-of-type) {
+  opacity: 0;
+}
+
+i {
+  left: 5px;
+  position: absolute;
+  animation: fadeIn 2.5s infinite;
+}
+
+@keyframes fadeIn {
+  100% {
+    translate: 0px 50%;
+    opacity: 0;
+  }
+}
