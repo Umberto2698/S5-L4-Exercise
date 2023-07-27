@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #666666;
+  color: black;
+  font-family: "Indie Flower", cursive;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+container {
+  margin-block: 1rem;
+  display: flex;
+  gap: 30px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 250px;
+  height: 180px;
+  box-shadow: 4px 4px 6px #2b2929e0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0000003d 10%, transparent);
+}
+
+.green:hover {
+  transition: all 1s;
+  transform: rotateZ(0deg);
+  scale: 1.3;
+  z-index: 1;
+}
+
+.purple:hover,
+.yellow:hover {
+  transition: all 1s;
+  transform: rotateZ(360deg);
+  scale: 1.3;
+  z-index: 1;
+}
+
+.yellow {
+  background-color: #fafbc9;
+  transform: rotateZ(357deg);
+}
+
+.green {
+  background-color: #cafccb;
+  transform: rotateZ(5deg);
+}
+
+.purple {
+  background-color: #c9c9f7;
+  transform: rotateZ(352deg);
+}
